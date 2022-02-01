@@ -1,0 +1,15 @@
+<html>
+<head>Hello Administrator!
+Check and edit the user details here:</head>
+<body style="background-color:olivedrab;">
+<form action='#' method='post'>
+{% csrf_token %}
+  Username:<br><br>
+  <input type='text' name='Username'><br><br>
+  Password:<br><br>
+  <input type='password' name='Password'><br><br>
+ 
+ <input type='submit' value='submit'>
+</form>
+</body>
+</html>

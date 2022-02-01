@@ -1,0 +1,35 @@
+<html>
+<body><h1><center> Welcome 
+{% for us in userinfo %}
+  {{us.Username}}<br><br></center></h1>
+
+{% endfor %}
+<form action="editpassword.html" method='POST'>
+{% csrf_token %}
+{% for Username in userinfo %}
+<input type="text" value={{Username.Username}}  name="Username" hidden><br>
+<input type="submit" value="edit password" name="edit">
+{% endfor %}
+</form>
+
+
+<form action="rqstbook.html" method='POST'>
+{% csrf_token %}
+{% for Username in userinfo %}
+<input type="text" value={{Username.Username}} name="Username" hidden>
+<input type="submit" value="reqbk" name="reqbk">
+{% endfor %}
+</form>
+
+<form action="viewbooks.html" method='POST'>
+{% csrf_token %}
+{% for Username in userinfo %}
+<input type="text" value={{Username.Username}} name="Username" hidden>
+<input type="submit" value="View Books" name="View Books">
+{% endfor %}
+</form>
+
+
+<a href="rqstbook.html? Name={{Username}}" value="{{Username}}"></a><br>
+</body>
+</html>

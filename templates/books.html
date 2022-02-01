@@ -1,0 +1,29 @@
+  <!DOCTYPE html>
+{% load static %}
+<html>
+<body>
+<h1>BOOKS:</h1>
+<ul>
+<li><img src="{% static '12.jpg' %}" width="300" height="200"></li>
+<form action='#' method='post'>
+  {% csrf_token %}
+</body>
+<p>
+    Book_Id:<br>
+  <input type='text' name='Book_Id'><br>
+  Book_Name:<br>
+  <input type='text' name='Book_Name'><br>
+  Author_Name:<br>
+  <input type='text' name='Author_Name'><br>
+
+Genre:<br>
+  <input type='radio' name='Genre' value='Classic' >Classic<br>
+  <input type='radio' name='Genre' value='Fantasy'> Fantasy<br>
+  <input type='radio' name='Genre' value='Literature'> Literature<br>
+  <input type='radio' name='Genre' value='Textbook'> Textbook<br>
+  <input type='radio' name='Genre' value='Science Fiction'>Science Fiction<br>
+
+<input type='submit' value='submit'>
+</form>
+</p>
+</html>

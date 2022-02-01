@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<table border="1" style="width:100%">
+	<caption>REGISTERED CUSTOMER DETAILS</caption>
+	<tr>
+	    <th>Name</th>
+                      <th>Phone_number</th> 
+                      <th>Address</th>
+                      <th>Email</th>
+                      <th>Occupation</th>
+                      <th>Username</th>
+                      <th>Password</th>
+                      <th>Gender</th>
+	</tr>
+{% for post in userrec %}	
+	<tr>
+		<td>
+			{{post.Name}}
+		</td>
+		<td>
+			{{post.Phone_number}}
+		</td>
+		<td>
+			{{post.Address}}
+		</td>
+		<td>
+			{{post.Email}}
+		</td>
+		<td>
+			{{post.Occupation}}
+		</td>
+		<td>
+			{{post.Username}}
+		</td>
+		<td>
+			{{post.Password}}
+		</td>
+		<td>
+			{{post.Gender}}
+		</td>
+
+
+	</tr>
+{% endfor %}	
+		
+	
+</table>	
+
+
+ 	
+
+
+</body>
+</html>

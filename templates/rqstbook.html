@@ -1,0 +1,19 @@
+<html>
+<body>
+<h>Request book here:</h>
+<form action="#" method='POST'>
+{% csrf_token %}
+Book_Name:<select name='Book_Name'><br>
+  <option value="True Man Biology">True Man Biology</option>
+  <option value="Modern ABC Chemistry">Modern ABC Chemistry</option>
+  <option value="Informatics Practices">Informatics Practices</option>
+</select><br><br>
+{% for a in User%}
+Name:<input type="text" value={{a.Name}} name="Name" readonly><br><br>
+{%endfor%}
+Request_date: <input type="DateField" name="Request_date"> <br> <br>
+Return_date: <input type="DateField" name="Return_date"> <br><br> 
+<input type="submit" name="request book" value="request book">
+</form>
+</body>
+</html>

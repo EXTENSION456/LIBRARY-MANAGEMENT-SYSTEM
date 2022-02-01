@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<table border="1" style="width:100%">
+	<caption>BOOK DETAILS</caption>
+	<tr>
+                      <th>Book_Id</th> 
+                      <th>Book_Name</th>
+                      <th>Author_Name</th>
+                      <th>Genre</th>
+	</tr>
+{% for post in bookrec %}	
+	<tr>
+		<td>
+			{{post.Book_Id}}
+		</td>
+		<td>
+			{{post.Book_Name}}
+		</td>
+		<td>
+			{{post.Author_Name}}
+		</td>
+		<td>
+			{{post.Genre}}
+		</td>
+		
+	</tr>
+{% endfor %}	
+		
+	
+</table>	
+
+
+ 	
+
+
+</body>
+</html>
